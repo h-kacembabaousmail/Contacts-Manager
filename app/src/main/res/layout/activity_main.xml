@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/label_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_name"
+        app:layout_constraintTop_toTopOf="@id/label_name" />
+
+    <TextView
+        android:id="@+id/label_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Tel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_name" />
+
+    <EditText
+        android:id="@+id/editText_phone"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Enter Phone Number"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/label_phone"
+        app:layout_constraintTop_toTopOf="@id/label_phone" />
+
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="1dp"
+        android:drawableLeft="@android:drawable/ic_input_add"
+        android:text="Add to contact list"
+        app:layout_constraintEnd_toStartOf="@+id/button_show"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editText_phone" />
+
+    <Button
+        android:id="@+id/button_show"
+        android:layout_width="204dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="20dp"
+        android:text="Show contacts"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_add"
+        app:layout_constraintTop_toBottomOf="@id/editText_phone" />
+
+    <ListView
+        android:id="@+id/list_contacts"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_add"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
